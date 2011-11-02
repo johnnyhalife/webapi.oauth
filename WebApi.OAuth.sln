@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.OAuth", "WebApi.OAuth\WebApi.OAuth.csproj", "{CD8CA0CA-849E-4061-AFE4-DF4FFC79ADD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.OAuth.NuGet", "WebApi.OAuth.NuGet\WebApi.OAuth.NuGet.csproj", "{65E03F31-D643-4599-BA59-42B0A1CDFB0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD8CA0CA-849E-4061-AFE4-DF4FFC79ADD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD8CA0CA-849E-4061-AFE4-DF4FFC79ADD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD8CA0CA-849E-4061-AFE4-DF4FFC79ADD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD8CA0CA-849E-4061-AFE4-DF4FFC79ADD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65E03F31-D643-4599-BA59-42B0A1CDFB0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65E03F31-D643-4599-BA59-42B0A1CDFB0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65E03F31-D643-4599-BA59-42B0A1CDFB0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65E03F31-D643-4599-BA59-42B0A1CDFB0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
