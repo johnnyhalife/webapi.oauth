@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>WebApi.OAuth</id>
-    <version>0.0.1.0</version>
+    <version>0.0.2.0</version>
     <title>OAuth Support for WCF Web Api</title>
     <authors>Johnny Halife, Juan Pablo Garcia, Mauro Krikorian, Mariano Converti, Damian Martinez, Nico Bello, and Ezequiel Morito</authors>
     <owners>Johnny Halife, Juan Pablo Garcia, Mauro Krikorian, Mariano Converti, Damian Martinez, Nico Bello, and Ezequiel Morito</owners>
@@ -16,8 +16,8 @@
     <tags>swt wif oauth wrap acs azure webapi</tags>
     <dependencies>
       <dependency id="aspnet.suppressformsredirect" version="0.0.1.4" />
-      <dependency id="HttpClient" version="0.5.0" />
-      <dependency id="Wif.Swt" version="0.0.1.1" />
+      <dependency id="HttpClient" version="0.6.0" />
+      <dependency id="Wif.Swt" version="0.0.1.4" />
     </dependencies>
   </metadata>
 </package>

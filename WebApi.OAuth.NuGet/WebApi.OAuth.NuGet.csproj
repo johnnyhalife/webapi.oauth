@@ -51,6 +51,7 @@
   <ItemGroup>
     <None Include="WebApi.OAuth.nuspec">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -58,6 +59,8 @@
     <PostBuildEvent>md $(TargetDir)\lib
 md $(TargetDir)\lib\40
 copy WebApi.OAuth.dll $(TargetDir)\lib\40\
+del System.Net.Http.dll
+del System.Net.Http.xml
 del WebApi.OAuth.pdb
 del WebApi.OAuth.dll
 del WebApi.OAuth.NuGet.dll
