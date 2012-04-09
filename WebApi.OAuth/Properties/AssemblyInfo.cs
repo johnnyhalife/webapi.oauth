@@ -1,6 +1,6 @@
 ﻿// <copyright file="AssemblyInfo.cs" company="open-source" >
-//  Copyright binary (c) 2011  by Johnny Halife, Juan Pablo Garcia, Mauro Krikorian, Mariano Converti,
-//                                Damian Martinez, Nico Bello, and Ezequiel Morito
+//  Copyright binary (c) 2012  by Johnny Halife, Juan Pablo Garcia, Mauro Krikorian, Mariano Converti,
+//                                Damian Martinez, Nicolas Bello Camilletti, and Ezequiel Morito
 //   
 //  Redistribution and use in source and binary forms, with or without modification, are permitted.
 //
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyProduct("WebApi.OAuth")]
-[assembly: AssemblyCopyright("Copyright © 2011")]
+[assembly: AssemblyCopyright("Copyright © 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

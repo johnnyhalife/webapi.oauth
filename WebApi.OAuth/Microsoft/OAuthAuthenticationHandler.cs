@@ -1,6 +1,6 @@
 ﻿// <copyright file="OAuthAuthenticationHandler.cs" company="open-source" >
-//  Copyright binary (c) 2011  by Johnny Halife, Juan Pablo Garcia, Mauro Krikorian, Mariano Converti,
-//                                Damian Martinez, Nico Bello, and Ezequiel Morito
+//  Copyright binary (c) 2012  by Johnny Halife, Juan Pablo Garcia, Mauro Krikorian, Mariano Converti,
+//                                Damian Martinez, Nicolas Bello Camilletti, and Ezequiel Morito
 //   
 //  Redistribution and use in source and binary forms, with or without modification, are permitted.
 //
@@ -76,7 +76,7 @@ namespace Microsoft.Net.Http
         /// </summary>
         /// <param name="request">Ongoing request</param>
         /// <param name="cancellationToken">Async Cancellation token</param>
-        /// <returns>Task execution for the WCF Web Api pipeline</returns>
+        /// <returns>Task execution for the ASP.NET Web Api pipeline</returns>
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             var token = ExtractTokenFromHeader(request);
