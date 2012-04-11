@@ -15,7 +15,7 @@ namespace Microsoft.Net.Http
     using System.Threading;
     using System.Threading.Tasks;
     using System.Web;
-
+    using System.Web.Http;
     using Microsoft.IdentityModel.Claims;
     using Microsoft.IdentityModel.Configuration;
     using Microsoft.IdentityModel.Swt;
@@ -26,7 +26,8 @@ namespace Microsoft.Net.Http
     /// due to WebApi requirement for ASP.NET we're also suppressing Forms Redirect by leveraging
     /// aspnet.suppressformsredirect Package.
     /// </summary>
-    public class OAuthAuthenticationHandler : DelegatingHandler
+    /// 
+    public class OAuthAuthenticationHandler : ControllerFilteredMessageProcessingHandler
     {
         /// <summary>
         /// Key used to stuff the Request with the authenticated principal after a
@@ -77,7 +78,7 @@ namespace Microsoft.Net.Http
         /// <param name="request">Ongoing request</param>
         /// <param name="cancellationToken">Async Cancellation token</param>
         /// <returns>Task execution for the ASP.NET Web Api pipeline</returns>
-        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        protected override HttpRequestMessage ProcessRequestHandler(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             var token = ExtractTokenFromHeader(request);
 
@@ -88,27 +89,23 @@ namespace Microsoft.Net.Http
 
                 // We authenticate the ongoing thread but also we stuff the principal on the message
                 // after a brief chat with Glenn Block we understood that the only way to authenticate
-                // a request and continue using it is to stuff it's authenticated user throught on 
+                // a request and continue using it is to stuff it's authenticated user throught on
                 // the message properties.
                 request.Properties[MessagePrincipalKey] = principal;
             }
-            catch 
+            catch
             {
-                // We trap the exception from the validator (validation fails with an exception)
-                return Task<HttpResponseMessage>.Factory.StartNew(() =>
-                {
-                    // HACK: Prevent ASP.NET Forms Authentication to redirect the user to the login page.
-                    // This thread-safe approach adds a header with the suppression to be read on the 
-                    // OnEndRequest event of the pipelien. In order to fully support the supression you should have the ASP.NET Module
-                    // that does this (SuppressFormsAuthenticationRedirectModule).  
-                    var response = new HttpResponseMessage(System.Net.HttpStatusCode.Unauthorized);
-                    response.Headers.Add(SuppressFormsAuthenticationRedirectModule.SuppressFormsHeaderName, "true");
+                // HACK: Prevent ASP.NET Forms Authentication to redirect the user to the login page.
+                // This thread-safe approach adds a header with the suppression to be read on the
+                // OnEndRequest event of the pipelien. In order to fully support the supression you should have the ASP.NET Module
+                // that does this (SuppressFormsAuthenticationRedirectModule).
+                var response = new HttpResponseMessage(System.Net.HttpStatusCode.Unauthorized);
+                response.Headers.Add(SuppressFormsAuthenticationRedirectModule.SuppressFormsHeaderName, "true");
 
-                    return response;
-                });
+                throw new HttpResponseException(response);
             }
 
-            return base.SendAsync(request, cancellationToken);
+            return request;
         }
     }
 }

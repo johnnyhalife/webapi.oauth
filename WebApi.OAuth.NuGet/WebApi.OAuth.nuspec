@@ -16,7 +16,7 @@
     <tags>swt wif oauth wrap acs azure webapi</tags>
     <dependencies>
       <dependency id="aspnet.suppressformsredirect" version="0.0.1.4" />
-      <dependency id="System.Net.Http" version="2.0.20126.16343" />
+      <dependency id="AspNetWebApi.Core" version="4.0.20126.16343" />
       <dependency id="Wif.Swt" version="0.0.1.4" />
     </dependencies>
   </metadata>

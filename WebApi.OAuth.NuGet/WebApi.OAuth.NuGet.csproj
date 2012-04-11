@@ -68,6 +68,14 @@ del Microsoft.Net.Http.dll
 del WebApi.OAuth.NuGet.pdb
 del Wif.Swt.dll
 del Microsoft.Net.Http.xml
+del System.Json.dll
+del System.Json.xml
+del System.Net.Http.Formatting.dll
+del System.Net.Http.Formatting.xml
+del System.Web.Http.Common.dll
+del System.Web.Http.Common.xml
+del System.Web.Http.dll
+del System.Web.Http.xml
 $(SolutionDir)Tools\NuGet.exe pack $(TargetDir)WebApi.OAuth.nuspec</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
