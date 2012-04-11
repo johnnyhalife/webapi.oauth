@@ -66,7 +66,7 @@ namespace Microsoft.Net.Http
         {
             var authorizationHeader = request.Headers.Authorization;
 
-            if (authorizationHeader.Scheme == "OAuth")
+            if (authorizationHeader != null && authorizationHeader.Scheme == "OAuth")
                 return new SimpleWebToken(authorizationHeader.Parameter);
 
             return null;
