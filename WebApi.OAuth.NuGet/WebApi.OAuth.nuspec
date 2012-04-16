@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>WebApi.OAuth</id>
-    <version>0.0.3.1</version>
+    <version>0.0.3.2</version>
     <title>OAuth Support for ASP.NET Web Api</title>
     <authors>Johnny Halife, Juan Pablo Garcia, Mauro Krikorian, Mariano Converti, Damian Martinez, Nicolas Bello Camilletti, and Ezequiel Morito</authors>
     <owners>Johnny Halife, Juan Pablo Garcia, Mauro Krikorian, Mariano Converti, Damian Martinez, Nicolas Bello Camilletti, and Ezequiel Morito</owners>
@@ -14,6 +14,9 @@
     </description>
     <language>en-US</language>
     <tags>swt wif oauth wrap acs azure webapi</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.IdentityModel" targetFramework="net40" />
+    </frameworkAssemblies>
     <dependencies>
       <dependency id="aspnet.suppressformsredirect" version="0.0.1.4" />
       <dependency id="AspNetWebApi.Core" version="4.0.20126.16343" />
