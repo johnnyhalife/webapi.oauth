@@ -60,11 +60,10 @@
 
 md "$(TargetDir)content"
 md "$(TargetDir)content\WebApi.OAuth"
-md "$(TargetDir)content\WebApi.OAuth\Microsoft"
 md "$(TargetDir)content\WebApi.OAuth\System"
 
-copy "$(SolutionDir)WebApi.OAuth\Microsoft\ControllerFilteredMessageProcessingHandler.cs" "$(TargetDir)content\WebApi.OAuth\Microsoft\ControllerFilteredMessageProcessingHandler.cs.pp"
-copy "$(SolutionDir)WebApi.OAuth\Microsoft\OAuthAuthenticationHandler.cs" "$(TargetDir)content\WebApi.OAuth\Microsoft\OAuthAuthenticationHandler.cs.pp"
+copy "$(SolutionDir)WebApi.OAuth\System\ControllerFilteredMessageProcessingHandler.cs" "$(TargetDir)content\WebApi.OAuth\System\ControllerFilteredMessageProcessingHandler.cs.pp"
+copy "$(SolutionDir)WebApi.OAuth\System\OAuthAuthenticationHandler.cs" "$(TargetDir)content\WebApi.OAuth\System\OAuthAuthenticationHandler.cs.pp"
 copy "$(SolutionDir)WebApi.OAuth\System\HttpRequestMessageExtensions.cs" "$(TargetDir)content\WebApi.OAuth\System\HttpRequestMessageExtensions.cs.pp"
 
 del WebApi.OAuth.pdb

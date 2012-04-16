@@ -68,8 +68,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Microsoft\ControllerFilteredMessageProcessingHandler.cs" />
-    <Compile Include="Microsoft\OAuthAuthenticationHandler.cs" />
+    <Compile Include="System\ControllerFilteredMessageProcessingHandler.cs" />
+    <Compile Include="System\OAuthAuthenticationHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="System\HttpRequestMessageExtensions.cs" />
   </ItemGroup>

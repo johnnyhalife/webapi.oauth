@@ -12,7 +12,6 @@
 namespace System.Net.Http
 {
     using System.Security.Principal;
-    using Microsoft.Net.Http;
 
     /// <summary>
     /// HttpRequestMessage extension methods.
