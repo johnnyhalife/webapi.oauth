@@ -77,7 +77,7 @@ namespace Microsoft.Net.Http
         /// </summary>
         /// <param name="request">Ongoing request</param>
         /// <param name="cancellationToken">Async Cancellation token</param>
-        /// <returns>Task execution for the ASP.NET Web Api pipeline</returns>
+        /// <returns>The HTTP request message that was processed</returns>
         protected override HttpRequestMessage ProcessRequestHandler(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             var token = ExtractTokenFromHeader(request);
