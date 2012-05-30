@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>WebApi.OAuth</id>
-    <version>0.0.3.2</version>
+    <version>0.0.3.3</version>
     <title>OAuth Support for ASP.NET Web Api</title>
     <authors>Johnny Halife, Juan Pablo Garcia, Mauro Krikorian, Mariano Converti, Damian Martinez, Nicolas Bello Camilletti, and Ezequiel Morito</authors>
     <owners>Johnny Halife, Juan Pablo Garcia, Mauro Krikorian, Mariano Converti, Damian Martinez, Nicolas Bello Camilletti, and Ezequiel Morito</owners>
